@@ -1,0 +1,27 @@
+﻿<Page x:Class="Five_Bomber.Pages.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Five_Bomber.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GamePage" Loaded="Page_Loaded">
+
+    <Grid>
+        <Viewbox>
+            <Grid>
+                <Image Name="BackGroundImage" Source="/BackGround_Game.jpg" Stretch="Fill" Visibility="Visible"/>
+                <Image Name="Blue_Bar" Margin="323,313,0,0" Source="/bar.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="246" Visibility="Visible" />
+                <Image Name="Green_Bar" Source="/bar.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="246" Margin="586,313,0,0" Visibility="Visible"/>
+                <Image Name="Yellow_Bar" Margin="853,313,0,0" Source="/bar.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="246" Visibility="Visible"/>
+                <Image Name="Orange_Bar" Margin="1104,313,0,0" Source="/bar.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="246" Visibility="Visible"/>
+                <Image Name="Red_Bar" Margin="1365,313,0,0" Source="/bar.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="246" Visibility="Visible"/>
+                <Image Name="Bomb" Margin="378,174,0,0" Source="/Bomb.png" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Visible"/>
+                <TextBlock Name="PointBox" HorizontalAlignment="Center" Margin="0,937,0,0" TextWrapping="Wrap" Text="0Point" VerticalAlignment="Top" Width="1324" Height="128" FontSize="100" Background="AliceBlue" TextAlignment="Center"/>
+                <Label Name="CountDownText" Content="5" HorizontalAlignment="Center" Margin="0,358,0,0" VerticalAlignment="Top" FontSize="300" Visibility="Hidden"/>
+                <Image Name="Danger" Source="/Danger.png" Stretch="Fill" Opacity="0"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>

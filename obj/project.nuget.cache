@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pCWz3L1RI+uA5vuhqvOHDlVuTPYSPHBSurYZ9EPAZeE8dvkI3FA9cz/afhmo/uPocPzmRXERn5VDnJDYvtjRCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\shake\\source\\repos\\Five-Bomber\\Five-Bomber\\Five-Bomber.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shake\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

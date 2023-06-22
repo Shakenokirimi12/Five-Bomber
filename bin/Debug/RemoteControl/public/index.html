@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Five-Reague Web Console</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#correctBtn").click(function () {
+          $.post(
+            "/write_file",
+            { file: "Collect.txt", data: "1" },
+            function (response) {
+              console.log(response);
+            }
+          );
+        });
+
+        $("#wrongBtn").click(function () {
+          $.post(
+            "/write_file",
+            { file: "Wrong.txt", data: "1" },
+            function (response) {
+              console.log(response);
+            }
+          );
+        });
+
+        $("#gameStartButton").click(function () {
+          $.post(
+            "/write_file",
+            { file: "GameStatus.txt", data: "1" },
+            function (response) {
+              console.log(response);
+            }
+          );
+          var SendTeamName = document.getElementById("teamName").value;
+          $.post(
+            "/write_file",
+            { file: "TeamName.txt", data: SendTeamName },
+            function (response) {
+              console.log(response);
+            }
+          );
+          var SendPlayerNumber = document.getElementById("playerNumber").value;
+          $.post(
+            "/write_file",
+            { file: "PlayerNumber.txt", data: SendPlayerNumber },
+            function (response) {
+              console.log(response);
+            }
+          );
+          var SendBombSpeed = document.getElementById("bombSpeed").value;
+          $.post(
+            "/write_file",
+            { file: "BombSpeed.txt", data: SendBombSpeed },
+            function (response) {
+              console.log(response);
+            }
+          );
+        });
+
+        $("#gameEndButton").click(function () {
+          $.post(
+            "/write_file",
+            { file: "GameStatus.txt", data: "2" },
+            function (response) {
+              console.log(response);
+            }
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Five-Reague Web Console</h1>
+    <div id="control">
+      <h1>チーム名↓</h1>
+      <input id="teamName" value="ななしのチーム" />
+      <h1>プレイヤー人数↓</h1>
+      <input id="playerNumber" type="number" value="5" max="5" min="3" />
+      <br />
+      <button id="gameStartButton">ゲーム開始</button>
+      <br />
+      <button id="correctBtn">〇</button>
+      <button id="wrongBtn">✕</button>
+      <br />
+      <button id="gameEndButton">ゲーム終了</button>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>
